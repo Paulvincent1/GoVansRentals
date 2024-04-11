@@ -112,6 +112,44 @@ body {
     align-items: center;
   
 }
+
+.status {
+  display: inline-block;
+
+
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+.status::after {
+  content: "";
+  top:7px;
+  right: 20px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 100%;
+  background-color: yellow;
+ 
+}
+@media (max-width: 1888px) {
+  .status::after {
+    right: 13px;
+  }
+}
+
+@media (max-width: 1672px) {
+  .status::after {
+    right: 0px;
+  }
+}
+@media (max-width: 1467px) {
+  .status::after {
+    right: -3px;
+  }
+}
+
 .section1 {
   border-right: 1px solid gray;
 }

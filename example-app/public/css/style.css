@@ -6,7 +6,7 @@
 
 body {
     
-    font-family: cursive;
+    font-family: sans-serif;
 }
 
 .navbar {
@@ -201,6 +201,95 @@ footer img {
     align-items: center;
    
     gap: 20px;
+}
+
+.min-height {
+    min-height: 80vh;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.margin-top {
+
+    margin-top:100px;
+    min-height: 80vh;
+}
+
+.anchor {
+    text-decoration: none;
+}
+h1,h2,h3 {
+    word-break: break-all; /* Breaks words at any character, even within words */
+}
+
+.van-show {
+ position: relative;
+}
+
+.van-show::after{
+    content: 'For Rent';
+    letter-spacing: 3px;
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+}
+.parent {
+    padding: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    border: 10px solid gray;
+}
+
+.form-show {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 30%;
+}
+
+.child {
+    width: 100%;
+   
+}
+
+.img-show {
+    height:500px; 
+    width: 500px;
+    box-shadow: 10px 10px 10px gray;
+    
+}
+
+.van-info {
+
+    height: 500px;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+
+.no-available {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: cursive;
+
+}
+
+@media (max-width:411){
+    .img-fluid {
+       padding: 100px;
+        height: auto;
+    }
 }
 
 @media (max-width: 767px) {
