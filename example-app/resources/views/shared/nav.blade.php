@@ -22,17 +22,20 @@
                         <a class="nav-link {{ Request::is('van') ? 'active mx-2 nav-highlight' : 'mx-2' }} "
                             href="{{ route('van') }}">Rent</a>
                     </li>
-                    <li class="nav-item dropdown mx-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Status
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="{{ route('my-request') }}">MY REQUEST</a></li>
-                            <li><a class="dropdown-item" href="{{ route('request-status') }}">REQUEST STATUS</a></li>
+                    @auth
 
-                        </ul>
-                    </li>
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Status
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="{{ route('my-request') }}">MY REQUEST</a></li>
+                                <li><a class="dropdown-item" href="{{ route('request-status') }}">REQUEST STATUS</a></li>
+
+                            </ul>
+                        </li>
+                    @endauth
                     @guest
                         <li class="nav-item mx-2">
                             <a class="nav-link {{ Request::is('signup') ? 'active mx-2 nav-highlight' : 'mx-2' }} "
