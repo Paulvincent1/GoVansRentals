@@ -22,13 +22,13 @@ class BookController extends Controller
 
         $data['user_id'] = auth()->user()->id;
         $data['van_id'] = $id->id;
-        Book::create($data);
+        $book = Book::create($data);
 
-        return response()->json('sucess');
+        return response()->json($book);
     }
     public function myRequest()
     {
-        $bookings = Book::where('user_id', auth()->user()->id)->where('status', 'pending')->get();
+        $bookings = Book::with('van')->where('user_id', auth()->user()->id)->where('status', 'pending')->get();
 
         return response()->json($bookings);
     }

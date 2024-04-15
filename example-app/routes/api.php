@@ -28,13 +28,15 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/vans/view/{id}', [VanController::class, 'show']);
 
     //booking
-    Route::post('vans/view/{id}', [BookController::class, 'store']);
+    Route::post('/vans/view/{id}', [BookController::class, 'store']);
     Route::get('/my-request', [BookController::class, 'myRequest']);
-    Route::get('my-request/{id}', [BookController::class, 'edit']);
-    Route::put('my-request/{id}', [BookController::class, 'update']);
+    Route::get('/my-request/{id}', [BookController::class, 'edit']);
+    Route::put('/my-request/{id}', [BookController::class, 'update']);
     Route::delete('/my-request/delete/{id}', [BookController::class, 'destroy']);
 
     Route::get('/request-status', [BookController::class, 'requestVan']);
+
+    Route::get('/users/current',[AuthController::class, 'currentUsers']);
 });
 
 //public routes
