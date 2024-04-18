@@ -83,7 +83,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Fill up your information</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Request form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -149,7 +149,7 @@
                         console.log(response);
                         location.reload();
 
-                        // window.location.href = 'https://example.com/other-page';
+                        window.location.href = '/my-request';
                     },
                     error: function(xhr, status, error) {
                         console.error('Error:', error);

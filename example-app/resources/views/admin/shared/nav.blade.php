@@ -69,10 +69,10 @@
                             placeholder="Ex: Toyota">
                         <label for="seat">Seat Capacity:</label>
                         <input type="number" name="seat_capacity" id="seat" class="form-control mb-3"
-                            min="1" placeholder="Ex: 10">
+                            min="1" max="20" placeholder="max: 20">
                         <label for="rate">Rate per day(Pesos):</label>
                         <input type="number" name="rate_per_day" id="rate" class="form-control mb-3"
-                            min="1" placeholder="Ex: 10000">
+                            min="1" max="50000" placeholder="max: 50000">
                         <label for="desc">Description:</label>
                         <input type="text" name="description" id="desc" class="form-control mb-3 pb-5">
                         <label for="img">Img:</label>

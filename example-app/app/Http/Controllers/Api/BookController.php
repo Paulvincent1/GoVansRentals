@@ -42,7 +42,7 @@ class BookController extends Controller
     {
 
         $data = $request->validate([
-            'name' => 'required|min:4',
+            'name' => 'required',
             'address' => 'required',
             'contact_number' => 'required',
             'note' => 'required',
@@ -51,7 +51,7 @@ class BookController extends Controller
 
         $id->update($data);
 
-        return response()->json('success');
+        return response()->json(['success' => $id],200);
     }
 
     public function destroy(Book $id)
@@ -62,7 +62,7 @@ class BookController extends Controller
 
     public function requestVan()
     {
-        $books = Book::whereIn('status', ['accepted', 'rejected', 'done'])->where('user_id', auth()->id())->get();
+        $books = Book::with('van')->whereIn('status', ['accepted', 'rejected', 'done'])->where('user_id', auth()->id())->get();
 
         return response()->json($books);
     }

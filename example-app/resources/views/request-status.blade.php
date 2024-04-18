@@ -11,8 +11,10 @@
                 @foreach ($books as $book)
                     <div class="col-12 col-md-4 col-lg-3">
                         <div class="card">
-                            <img src="{{ asset($book->van->img) }}" alt="" class="card-img-top img-fluid"
-                                style="height: 300px; object-fit: contain;">
+               
+                                <img src="{{ asset($book->van->img) }}" alt="" class="card-img-top img-fluid"
+                                style="height: 250px;">
+                           
                             <div class="card-body">
                                 <div class="card-title text-center" style="font-weight: bold">
                                     {{ strlen($book->van->model) > 20 ? substr($book->van->model, 0, 20) . '...' : $book->van->model }}

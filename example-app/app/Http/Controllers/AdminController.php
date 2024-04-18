@@ -57,9 +57,9 @@ class AdminController extends Controller
     {
         $data = $request->validate([
             'model' => 'required|max:50',
-            'seat_capacity' => 'required|integer|min:1',
-            'rate_per_day' => 'required|integer',
-            'description' => 'required',
+            'seat_capacity' => 'required|integer|min:1|max:20',
+            'rate_per_day' => 'required|integer|min:1|max:20000',
+            'description' => 'required|max:250',
             'img' => 'required|image|mimes:jpeg,png,jpg'
         ]);
 
@@ -85,9 +85,9 @@ class AdminController extends Controller
     {
         $data = $request->validate([
             'model' => 'required|max:50',
-            'seat_capacity' => 'required|integer|min:1',
-            'rate_per_day' => 'required|integer',
-            'description' => 'required',
+            'seat_capacity' => 'required|integer|min:1|max:20',
+            'rate_per_day' => 'required|integer|min:1|max:20000',
+            'description' => 'required|max:250',
             'img' => 'required|image|mimes:jpeg,png,jpg'
         ]);
 
@@ -124,6 +124,10 @@ class AdminController extends Controller
         Record::create([
             'profit' => $total
         ]);
+
+        Book::where('van_id', $id->van->id)
+        ->where('status','pending')
+        ->update(['status' => 'rejected']);
 
         $id->update([
             'status' => 'accepted'
