@@ -19,8 +19,8 @@
                     <input type="number" id="day" class="form-control mb-3" name="day"
                         value="{{ $id->day }}">
                     <label for="note">Note:</label>
-                    <input type="text" id="note" class="form-control pb-4 mb-3" name="note"
-                        value="{{ $id->note }}">
+                    <textarea type="text" id="note" class="form-control pb-4 mb-3" name="note"
+                       >{{ $id->note }}</textarea>
                     <input type="submit" class="btn btn-primary" style="width:100% ">
                 </form>
             </div>

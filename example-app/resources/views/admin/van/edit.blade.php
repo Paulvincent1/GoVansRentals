@@ -37,8 +37,8 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
                 <label for="desc">Description:</label>
-                <input type="text" class="form-control pb-5" name="description" id="desc"
-                    value="{{ $van->description }}" required>
+                <textarea type="text" class="form-control pb-5" name="description" id="desc"
+                     required>{{ $van->description }}</textarea>
                 @error('description')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror

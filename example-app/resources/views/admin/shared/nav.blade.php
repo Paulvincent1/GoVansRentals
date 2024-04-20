@@ -74,7 +74,7 @@
                         <input type="number" name="rate_per_day" id="rate" class="form-control mb-3"
                             min="1" max="50000" placeholder="max: 50000">
                         <label for="desc">Description:</label>
-                        <input type="text" name="description" id="desc" class="form-control mb-3 pb-5">
+                        <textarea type="text" name="description" id="desc" class="form-control mb-3 pb-5"></textarea>
                         <label for="img">Img:</label>
                         <input type="file" name="img" id="img" class="form-control mb-3">
 

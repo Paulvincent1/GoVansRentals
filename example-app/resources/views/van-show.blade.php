@@ -99,7 +99,7 @@
                     <label for="day">Days Rent:</label>
                     <input type="number" id="day" name="day" class="form-control mb-3" required>
                     <label for="note">Note:</label>
-                    <input type="text" id="note" class="form-control pb-4" required>
+                    <textarea type="text" id="note" class="form-control pb-4" required></textarea>
 
                 </div>
                 <div class="modal-footer">
