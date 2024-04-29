@@ -12,7 +12,7 @@ class VanController extends Controller
     public function index()
     {
         $vans = Van::whereDoesntHave('books', function ($q) {
-            $q->whereIn('status', ['accepted', 'done']);
+            $q->where('status', 'accepted');
         })->paginate(12);
 
         return view('rent', ['vans'  => $vans]);

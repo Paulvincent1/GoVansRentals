@@ -36,7 +36,7 @@ class BookController extends Controller
             'address' => 'required',
             'contact_number' => 'required',
             'note' => 'required',
-            'day' => 'required',
+            'day' => 'required|max:20',
         ]);
 
 
@@ -75,7 +75,7 @@ class BookController extends Controller
             'address' => 'required',
             'contact_number' => 'required',
             'note' => 'required',
-            'day' => 'required',
+            'day' => 'required|integer|min:1|max:20',
         ]);
 
         $id->update($data);

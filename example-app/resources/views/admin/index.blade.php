@@ -81,10 +81,10 @@
                                     <div class="status text-center">{{ $item->status }}</div>
                                 </td>
                                 <td>
-                                    <button class="btn btn-danger form-control btn-reject"
+                                    <button class="btn btn-outline-danger form-control btn-reject"
                                         data-van-id="{{ $item->id }}">Reject</button>
                                 </td>
-                                <td><button class="btn btn-success form-control btn-accept"
+                                <td><button class="btn btn-outline-success form-control btn-accept"
                                         data-van-id="{{ $item->id }}">Accept</button></td>
                             </tr>
                         @endforeach

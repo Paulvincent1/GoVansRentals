@@ -42,7 +42,7 @@
                 @error('description')
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
-                <input type="submit" class="btn btn-success mt-3 form-control">
+                <input type="submit" class="btn btn-outline-success mt-3 form-control">
             </form>
         </div>
         <div class="col-12 col-md-6">

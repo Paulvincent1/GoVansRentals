@@ -9,19 +9,44 @@
                     @method('PUT')
                     <label for="name">Name:</label>
                     <input type="text" id="name" class="form-control mb-3" name="name" value="{{ $id->name }}">
+                    @error('name')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                    @enderror
                     <label for="address">Address:</label>
                     <input type="text" id="address" class="form-control mb-3" name="address"
                         value="{{ $id->address }}">
+                        @error('address')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <label for="contact_number">Contact Number:</label>
                     <input type="text" id="contact_number" class="form-control mb-3" name="contact_number"
                         value="{{ $id->contact_number }}">
+                        @error('contact_number')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <label for="day">Day:</label>
                     <input type="number" id="day" class="form-control mb-3" name="day"
-                        value="{{ $id->day }}">
+                        value="{{ $id->day }}" min="1" max="20">
+                        @error('day')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                        @enderror
                     <label for="note">Note:</label>
                     <textarea type="text" id="note" class="form-control pb-4 mb-3" name="note"
                        >{{ $id->note }}</textarea>
-                    <input type="submit" class="btn btn-primary" style="width:100% ">
+                       @error('note')
+                        <div class="text-danger">
+                            {{ $message }}
+                        </div>
+                        @enderror
+                    <input type="submit" class="btn btn-outline-primary" style="width:100% ">
                 </form>
             </div>
             <div class="col-12 col-md-6">

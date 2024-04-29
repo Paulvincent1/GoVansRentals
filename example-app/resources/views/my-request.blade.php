@@ -22,14 +22,14 @@
 
                                 <div style="width: 100% ;margin: 0 auto;" class="text-center">
 
-                                    <a href="{{ route('edit', $book->id) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('edit', $book->id) }}" class="btn btn-outline-primary">Edit</a>
 
 
                                     <form action="{{ route('my-request.delete', ['id' => $book->id]) }}" method="POST"
                                         style="display: inline-block">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-danger">Delete</button>
+                                        <button class="btn btn-outline-danger">Delete</button>
                                     </form>
 
                                 </div>

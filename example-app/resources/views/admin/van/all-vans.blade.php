@@ -27,14 +27,14 @@
                         <td>₱{{ $item->rate_per_day }}</td>
                         <td>{{ $item->description }}</td>
                         <td>
-                            <a href="{{ route('admin.edit.van', ['id' => $item->id]) }}" class="btn btn-primary"
+                            <a href="{{ route('admin.edit.van', ['id' => $item->id]) }}" class="btn btn-outline-primary"
                                 style="width:100%">Edit</a>
                         </td>
                         <td>
                             <form action="{{ route('admin.delete.van', ['id' => $item->id]) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <input type="submit" class="btn btn-danger" style="width:80%" value="Delete">
+                                <input type="submit" class="btn btn-outline-danger" style="width:80%" value="Delete">
                             </form>
                         </td>
 
